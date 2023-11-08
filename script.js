@@ -22,16 +22,16 @@ function loco() {
     pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 
   });
-  gsap.to(".left-page4", {
-    top: '-60%', // Move down initially
-    scrollTrigger: {
-      trigger: ".left-page4",
-      start: 'top 80%',
-      scrub: true,
-      toggleActions: 'play none none reverse',
-      scroller: "#main", // Use Locomotive Scroll as the scroller
-    },
-  });
+  // gsap.to(".left-page4", {
+  //   top: '-60%', // Move down initially
+  //   scrollTrigger: {
+  //     trigger: ".left-page4",
+  //     start: 'top 80%',
+  //     scrub: true,
+  //     toggleActions: 'play none none reverse',
+  //     scroller: "#main", // Use Locomotive Scroll as the scroller
+  //   },
+  // });
   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
@@ -243,11 +243,11 @@ ScrollTrigger.create({
 });
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "3",
+  slidesPerView: 3,
   centeredSlides: true,
   spaceBetween: 30,
   // grabCursor: true,
-  spaceBetween: 30,
+  // spaceBetween: 30,
 });
 
 const cursor = document.querySelector('.cursor');

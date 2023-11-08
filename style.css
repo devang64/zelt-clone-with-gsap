@@ -222,6 +222,7 @@ canvas {
 }
 .center-page4{
     display: flex;
+    justify-content: center;
     border-radius: 12px;
     height: 75%;
     width: 80%;
@@ -260,6 +261,7 @@ canvas {
 .right-page4{
     display: flex;
     justify-content: center;
+    align-items: start;
     flex-direction: column;
     /* height: 100%; */
     width: 50%;
@@ -293,9 +295,10 @@ canvas {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    width: 28% !important;
+    width: 23% !important;
     height : 75% !important;
     border-radius: 12px;
+    overflow: hidden;
   }
   .profile-intro{
     margin-top: 20px;
@@ -408,7 +411,8 @@ align-items: center;
    margin-top: 40px;
    display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: start;
+   flex: auto;
 }
 .page6 .center-page-6 img{
    width: 90px;
@@ -417,6 +421,10 @@ align-items: center;
   margin-left: 40px;
    
 }
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translatex(-100%); }
+  }
 .page6 h1{
     font-size: 45px;
     font-weight: 100;
@@ -428,18 +436,19 @@ align-items: center;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    border-radius: 12px;
-    background-color: #ffffff;
     margin-top: 5%;
 }
 .bottom-page6 .box{
     width: 300px;
     height: 250px;
     display: flex;
+    border-radius: 12px;
+    background-color: #ffff;
     justify-content: space-around;
     flex-direction: column;
     align-items:flex-start;
     border-right: 1px solid #f3f0ed ;
+    margin: 0 10px;
     padding : 40px;
 }
 .bottom-page6 .box:nth-last-child(1){
@@ -447,7 +456,7 @@ align-items: center;
 }
 .bottom-page6 .box img{
     height: 50px;
-    background-color: #ffffff;
+    
 }
 .bottom-page6 .box h1{
    font-size: 28px;
@@ -552,7 +561,7 @@ align-items: center;
         width: 80%;
         font-size: 20px;
         font-weight: 100;
-        top:6%;
+        top:8%;
         left: 50%;
     }
     .page1>h1{
@@ -590,11 +599,11 @@ align-items: center;
     }
     .center-page4{
         flex-direction: column;
-        top: 60%;
+        top: 40%;
         transform: translate(-50%,-50%);
-        height: 100%;
         width: 88%;
         left: 50%;
+        border-radius: 10px;
     }
     .left-page4{
         width:100%;
@@ -605,7 +614,7 @@ align-items: center;
         width: 80%;
         display: flex;
         background-color: #fff;
-        /* padding: 15px 10px 15px 20px; */
+        padding: 4px 10px 5px 10px;
         border-radius: 10px;
     }
     .elem-page4>img{
@@ -616,12 +625,70 @@ align-items: center;
         font-size: 12px;
      }
      .right-page4{
+        width: 100%;
+        margin-top: 5px;
+        margin-left: 30px;
+     }
+     .right-page4 h1{
+        font-weight: 500;
+        font-size: 40px;
+    }
+    .right-page4 p{
+        margin-top: 10px;
+        width: 70%;
+        font-size: 16px;
+        color: #dcdcdc;
+    }
+    .swiper-slide {
+        font-size: 16px;
+        background: #fff;
+        width: 70% !important;
+        height : 60% !important;
+      }
+      .brands{
+        width: 80%;
+        animation: scrolling 10s linear infinite ;
+      }
+      .page6 .center-page-6 img{
+        width: 60px;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+       margin-left: 40px;
+        
+     }
+     .page6 .bottom-page6 {
+        width: 70%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        /* height: 100%; */
-        width: 100%;
-        color: #ffff;
+        border-radius: 12px;
+    }
+     .page6 .bottom-page6 .box{
+        padding : 20px;
+        margin: 5px;
+    }
+    .bottom-page6 .box img{
+        height: 30px;
+        
+    }
+
+    .footer{
+        padding: 20px 20px 20px 40px;
+        
+    }
+    .top-footer h1{
+        font-size: 45px;
+    }
+    .bottom-footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .link-column{
+        flex-direction: column;
+    }
+    .list-link{
+        margin-top: 10px;
+        flex-direction: column;
     }
 }

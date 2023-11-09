@@ -281,3 +281,20 @@ page5.addEventListener('mouseleave', () => {
 //         cursor.classList.remove('expand');
 //     }, 500);
 // });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuItems = document.querySelector('.menu-items');
+
+  menuToggle.addEventListener('change', function () {
+      menuItems.style.display = this.checked ? 'flex' : 'none';
+  });
+
+  window.addEventListener('resize', function () {
+      // Hide the menu on larger screens
+      if (window.innerWidth > 768) {
+          menuItems.style.display = 'flex';
+          menuToggle.checked = false;
+      }
+  });
+});

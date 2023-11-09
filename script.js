@@ -22,16 +22,16 @@ function loco() {
     pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 
   });
-  // gsap.to(".left-page4", {
-  //   top: '-60%', // Move down initially
-  //   scrollTrigger: {
-  //     trigger: ".left-page4",
-  //     start: 'top 80%',
-  //     scrub: true,
-  //     toggleActions: 'play none none reverse',
-  //     scroller: "#main", // Use Locomotive Scroll as the scroller
-  //   },
-  // });
+  gsap.to(".left-page4", {
+    top: '-20%', // Move down initially
+    scrollTrigger: {
+      trigger: ".left-page4",
+      start: 'top 80%',
+      scrub: true,
+      toggleActions: 'play none none reverse',
+      scroller: "#main", // Use Locomotive Scroll as the scroller
+    },
+  });
   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
